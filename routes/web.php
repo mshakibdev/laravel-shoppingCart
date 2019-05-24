@@ -26,4 +26,6 @@
         Route::get('/logout','UserController@getLogout')->name('user.logout');
     });
     
+    Route::get('add-to-cart/{id}','ProductController@getAddToCart')->name('product.add-to-cart');
+    
    
