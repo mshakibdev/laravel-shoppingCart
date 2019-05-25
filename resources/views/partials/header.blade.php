@@ -2,7 +2,7 @@
 
 <div id="app" class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="{{route('product.index')}}">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -15,7 +15,9 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/"><i class="fas fa-shopping-cart"></i> Shoping cart</a>
+                    <a class="nav-link" href="{{route('product.shoppingcart')}}"><i class="fas fa-shopping-cart"></i> Shoping cart
+                        <span class="badge">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
+                    </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

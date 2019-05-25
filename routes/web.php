@@ -28,4 +28,10 @@
     
     Route::get('add-to-cart/{id}','ProductController@getAddToCart')->name('product.add-to-cart');
     
-   
+    Route::get('shopping-cart/','ProductController@getCart')->name('product.shoppingcart');
+    
+    Route::get('checkout','ProductController@getCheckout')->name('checkout');
+   // Route::post('checkout','ProductController@postCheckout')->name('checkout');
+    
+    Route::get('stripe', 'StripePaymentController@stripe');
+    Route::post('stripe', 'StripePaymentController@stripePost')->name('stripe.post');

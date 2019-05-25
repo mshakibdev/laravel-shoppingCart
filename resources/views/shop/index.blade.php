@@ -14,7 +14,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{$product->title}}</h5>
                             <p class="card-text description">{{$product->description}}</p>
-                            <div class="price">{{$product->price}}$</div>
+                            <div class="price">{{$product->price}} $</div>
                             <a href="{{ route('product.add-to-cart',['id'=>$product->id]) }}" class="btn btn-success  ">Add to cart</a>
                         </div>
                     </div>
